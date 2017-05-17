@@ -36,6 +36,40 @@ public class TransformaTexto {
 	    
 		return transformado;
 	}
+	
+	public static String stopwords(String texto){
+		
+		String transformado="";
+		Pattern p = Pattern.compile("[a-zA-Zр-љР-йс-њС-к0-9]+");
+	    Matcher m = p.matcher(texto);
+	    while(m.find()) {
+	    	transformado+= m.group()
+	    	.replace("de", "")
+	    	.replace("a", "")
+	    	.replace("o", "")
+	    	.replace("e", "")
+	    	.replace("do", "")
+	    	.replace("da", "")
+	    	.replace("em", "")
+	    	.replace("um", "")
+	    	.replace("para", "")
+	    	+" ";
+	    	
+	    	 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			
+	    	
+	    }
+	    
+		return transformado;
+	}
 
 	public static void main(String[] args) throws IOException {
 	

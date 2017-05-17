@@ -8,12 +8,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 
 public class TextoBase {
 
 	public static void main(String[] args) throws IOException {
-		ArrayList<String> array = lerArquivo("ListaP.txt");
+		ArrayList<String> array = lerArquivo("PreconceitoConvertido.txt");
 		salvaArquivo(array);
 	}
 
@@ -25,19 +26,23 @@ public class TextoBase {
 		
 		ArrayList<String> indices = new ArrayList<String>();
 		String linha;
-
+		
+		/*
 		while ((linha = lerArq.readLine()) != null) {
 			indices.add(TransformaTexto.transformaTexto(linha));
 			System.out.println(linha);
 		}
-
+		*/
+		while((linha = lerArq.readLine()) != null){
+			//indices.add(StopWord.);
+		}
 		//arq.close();
 		return indices;
 
 	}
 
 	static void salvaArquivo(ArrayList<String> string) throws IOException {
-		FileWriter arqW = new FileWriter("ListaP1.txt");
+		FileWriter arqW = new FileWriter("PreconceitoConvertidoNOVO1.txt");
 		PrintWriter gravarArq = new PrintWriter(arqW);
 
 		for (String frase : string) {
